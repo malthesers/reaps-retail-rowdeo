@@ -1,0 +1,565 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+img,
+div,
+p {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    margin: 0 auto;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.pause {
+    animation-play-state: paused;
+    pointer-events: none;
+}
+
+#shadow {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 70%;
+    z-index: 5;
+}
+
+/*----------screens----------*/
+
+#screen {
+    position: relative;
+    max-width: 100%;
+    width: 100vw;
+    height: 56.25vw;
+    overflow: hidden;
+}
+
+#screen-start {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#start-background {
+    position: absolute;
+    background: url(svgs/screens/startscreen-background.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+#start-foreground {
+    position: absolute;
+    background: url(svgs/screens/startscreen-foreground.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    bottom: -2vw;
+}
+
+#screen-game {
+    position: absolute;
+    background: url(svgs/screens/gamescreen.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+#screen-end {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 6;
+}
+
+#screen-end-board {
+    position: absolute;
+    width: 50vw;
+    height: 40vw;
+    left: 25vw;
+    top: 7vw;
+    background-color: #E6CD9F;
+    border: solid 0.5vw black;
+    border-radius: 2vw;
+}
+
+#screen-end-text {
+    width: 100%;
+    height: 100%;
+    padding: 3vw;
+    font-family: 'Chewy', sans-serif;
+    font-size: 4vw;
+}
+
+#unicorn-reaper {
+    position: absolute;
+    width: 30vw;
+    left: 6vw;
+    top: 20vw;
+}
+
+#battle-bus {
+    position: absolute;
+    top: 1vw;
+    width: 15vw;
+    transform: translateX(-15vw);
+    animation: battle-bus;
+    animation-iteration-count: infinite;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-delay: 3s;
+}
+
+@keyframes battle-bus {
+    0% {
+        transform: translateX(-15vw)
+    }
+
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+/*----------squad-selection----------*/
+
+#squad-layout {
+    position: absolute;
+    width: 90vw;
+    height: 40vw;
+    left: 5vw;
+    top: 4vw;
+    background-color: #E6CD9F;
+    border: solid 0.5vw black;
+    border-radius: 2vw;
+    z-index: 6;
+}
+
+#squad-selection {
+    width: 100%;
+    height: 100%;
+    padding: 1vw;
+    display: grid;
+    grid-template-columns: 4fr 1fr 4fr;
+    grid-gap: 1vw;
+}
+
+.squad-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.5vw;
+    height: 60%;
+}
+
+.squad-skin {
+    border: 0.5vw solid black;
+    border-radius: 2vw;
+    text-align: center;
+    background-color: #E6CD9F;
+    height: 100%;
+    display: grid;
+    cursor: pointer;
+}
+
+.squad-skin:hover {
+    transform: scale(1.2);
+    transition-duration: 0.3s;
+}
+
+.squad-skin img {
+    place-self: center;
+    width: 80%;
+}
+
+#squad-selector {
+    width: 100%;
+    height: 100%;
+    padding: 1vw;
+}
+
+#squad-selector-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1vw;
+}
+
+#squad-selector-container .squad-skin {
+    height: 13vw;
+}
+
+#squad-selector-container .squad-skin img {
+    height: 10vw;
+}
+
+#squad-vs {
+    display: grid;
+}
+
+#squad-vs h2 {
+    place-self: center;
+    margin: 0 !important;
+}
+
+h2 {
+    font-family: 'Chewy', sans-serif;
+    font-size: 4vw;
+    margin-top: 0.5vw;
+    text-align: center;
+}
+
+/*----------game-ui----------*/
+
+#score-board {
+    position: absolute;
+    top: 1vw;
+    left: 4vw;
+    height: 8vw;
+    width: 14vw;
+    background-color: #E6CD9F;
+    border: solid 0.5vw black;
+    border-radius: 2vw;
+    z-index: 6;
+}
+
+#score-board-scythe {
+    height: 7vw;
+    transform: translateX(-2.5vw);
+    z-index: 6;
+}
+
+#score-board-tally {
+    position: absolute;
+    right: 0.5vw;
+    font-family: 'Chewy', sans-serif;
+    font-size: 6vw;
+    color: black;
+    direction: rtl;
+    margin: 0;
+}
+
+#life-board {
+    position: absolute;
+    top: 1vw;
+    right: 1vw;
+}
+
+.life {
+    height: 7vw;
+    margin: 0 0.5vw;
+}
+
+.life-lost {
+    animation-name: life-lost;
+    animation-duration: 0.7s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+}
+
+@keyframes life-lost {
+    10% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+/*----------banners----------*/
+
+#banner-start {
+    left: 38vw;
+    top: 18vw;
+    width: 23vw;
+}
+
+#banner-squads {
+    left: 34vw;
+    top: 31vw;
+    width: 27vw;
+}
+
+.banner {
+    position: absolute;
+    cursor: pointer;
+    animation: banner-downsize;
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+}
+
+.banner:hover {
+    animation: banner-upsize;
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+}
+
+@keyframes banner-downsize {
+    0% {
+        transform: scale(1.2)
+    }
+
+    100% {
+        transform: scale(1)
+    }
+}
+
+@keyframes banner-upsize {
+    0% {
+        transform: scale(1)
+    }
+
+    100% {
+        transform: scale(1.2)
+    }
+}
+
+/*----------buttons----------*/
+
+#button-fullscreen {
+    bottom: 1vw;
+    left: 1vw;
+}
+
+#button-sound {
+    bottom: 1vw;
+    left: 12vw;
+}
+
+#button-home {
+    bottom: 5vw;
+    left: 35vw;
+}
+
+#button-restart {
+    bottom: 5vw;
+    right: 35vw;
+}
+
+.button {
+    position: absolute;
+    cursor: pointer;
+    width: 10vw;
+    animation: button-downsize;
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    z-index: 6;
+}
+
+.button:hover {
+    animation: button-upsize;
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+}
+
+@keyframes button-downsize {
+    0% {
+        transform: scale(1.1)
+    }
+
+    100% {
+        transform: scale(1)
+    }
+}
+
+@keyframes button-upsize {
+    0% {
+        transform: scale(1)
+    }
+
+    100% {
+        transform: scale(1.1)
+    }
+}
+
+/*----------squads----------*/
+
+.container {
+    position: absolute;
+    cursor: pointer;
+}
+
+.sprite {
+    height: auto;
+    width: 9vw;
+}
+
+/*----------game-animations----------*/
+
+
+.fall {
+    animation-name: fall;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10vw);
+    }
+
+    100% {
+        transform: translateY(80vw);
+    }
+}
+
+.hit-left {
+    animation-name: hit-left;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+}
+
+@keyframes hit-left {
+    100% {
+        transform: translate(-100vw, -30vw);
+    }
+}
+
+.hit-right {
+    animation-name: hit-right;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+}
+
+@keyframes hit-right {
+    100% {
+        transform: translate(100vw, -30vw);
+    }
+}
+
+/*----------game-rng----------*/
+
+.delay0 {
+    animation-delay: 0s;
+}
+
+.delay1 {
+    animation-delay: 0.5s;
+}
+
+.delay2 {
+    animation-delay: 1s;
+}
+
+.delay3 {
+    animation-delay: 1.5s
+}
+
+.pos0 {
+    top: -20vw;
+    left: 5vw;
+}
+
+.pos1 {
+    top: -20vw;
+    left: 10vw;
+}
+
+.pos2 {
+    top: -20vw;
+    left: 15vw;
+}
+
+.pos3 {
+    top: -20vw;
+    left: 20vw;
+}
+
+.pos4 {
+    top: -20vw;
+    left: 25vw;
+}
+
+.pos5 {
+    top: -20vw;
+    left: 30vw;
+}
+
+.pos6 {
+    top: -20vw;
+    left: 35vw;
+}
+
+.pos7 {
+    top: -20vw;
+    left: 40vw;
+}
+
+.pos8 {
+    top: -20vw;
+    left: 45vw;
+}
+
+.pos9 {
+    top: -20vw;
+    left: 50vw;
+}
+
+.pos10 {
+    top: -20vw;
+    left: 55vw;
+}
+
+.pos11 {
+    top: -20vw;
+    left: 60vw;
+}
+
+.pos12 {
+    top: -20vw;
+    left: 65vw;
+}
+
+.pos13 {
+    top: -20vw;
+    left: 70vw;
+}
+
+.pos14 {
+    top: -20vw;
+    left: 75vw;
+}
+
+.pos15 {
+    top: -20vw;
+    left: 80vw;
+}
+
+.pos16 {
+    top: -20vw;
+    left: 85vw;
+}
+
+.pos17 {
+    top: -20vw;
+    left: 90vw;
+}

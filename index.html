@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reap's Retail Rowdeo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <div id="screen">
+        <div id="screen-start">
+            <div id="start-background">
+                <img id="battle-bus" src="svgs/characters/battle-bus.svg">
+            </div>
+            <div id="start-foreground">
+                <img id="banner-start" class="banner" src="svgs/buttons/start.svg">
+                <img id="banner-squads" class="banner" src="svgs/buttons/squads.svg">
+            </div>
+            <div id="squad-layout" class="hidden">
+                <div id="squad-selection">
+                    <div id="squad-allies">
+                        <h2>Allies</h2>
+                        <div class="squad-container">
+                            <div class="squad-skin">
+                                <img id="ally1" src="svgs/skins/skin-reaps.svg">
+                            </div>
+                            <div class="squad-skin">
+                                <img id="ally2" src="svgs/skins/skin-reaps.svg">
+                            </div>
+                            <div class="squad-skin">
+                                <img id="ally3" src="svgs/skins/skin-reaps.svg">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="squad-vs">
+                        <h2>vs</h2>
+                    </div>
+                    <div id="squad-enemies">
+                        <h2>Enemies</h2>
+                        <div class="squad-container">
+                            <div class="squad-skin">
+                                <img id="enemy1" src="svgs/skins/skin-default1.svg">
+                            </div>
+                            <div class="squad-skin">
+                                <img id="enemy2" src="svgs/skins/skin-default1.svg">
+                            </div>
+                            <div class="squad-skin">
+                                <img id="enemy3" src="svgs/skins/skin-default1.svg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="squad-selector" class="hidden">
+                    <h2>Select a skin</h2>
+                    <div id="squad-selector-container">
+                        <div class="squad-skin">
+                            <img id="skin-reaps" src="svgs/skins/skin-reaps.svg">
+                        </div>
+                        <div class="squad-skin">
+                            <img id="skin-johnwick" src="svgs/skins/skin-johnwick.svg">
+                        </div>
+                        <div class="squad-skin">
+                            <img id="skin-luxe" src="svgs/skins/skin-luxe.svg">
+                        </div>
+                        <div class="squad-skin">
+                            <img id="skin-peely" src="svgs/skins/skin-peely.svg">
+                        </div>
+                        <div class="squad-skin">
+                            <img id="skin-default1" src="svgs/skins/skin-default1.svg">
+                        </div>
+                        <div class="squad-skin">
+                            <img id="skin-default2" src="svgs/skins/skin-default2.svg">
+                        </div>
+                        <div class="squad-skin">
+                            <img id="skin-default3" src="svgs/skins/skin-default3.svg">
+                        </div>
+                        <div class="squad-skin">
+                            <img id="skin-default4" src="svgs/skins/skin-default4.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img id="button-fullscreen" class="button" src="svgs/buttons/fullscreen-on.svg">
+            <img id="button-sound" class="button" src="svgs/buttons/sound-on.svg">
+        </div>
+        <div id="screen-game" class="hidden">
+            <div id="score-board">
+                <p id="score-board-tally"></p>
+                <img id="score-board-scythe" src="svgs/ui/score-board-scythe.svg">
+            </div>
+            <div id="life-board">
+                <img id="life1" class="life" src="svgs/ui/life-board-reaps.svg">
+                <img id="life2" class="life" src="svgs/ui/life-board-reaps.svg">
+                <img id="life3" class="life" src="svgs/ui/life-board-reaps.svg">
+            </div>
+            <div class="allies">
+                <div id="container-ally1" class="container">
+                    <img id="sprite-ally1" class="sprite" src="svgs/skins/skin-reaps.svg">
+                </div>
+                <div id="container-ally2" class="container">
+                    <img id="sprite-ally2" class="sprite" src="svgs/skins/skin-reaps.svg">
+                </div>
+                <div id="container-ally3" class="container">
+                    <img id="sprite-ally3" class="sprite" src="svgs/skins/skin-reaps.svg">
+                </div>
+            </div>
+            <div class="enemies">
+                <div id="container-enemy1" class="container">
+                    <img id="sprite-enemy1" class="sprite" src="svgs/skins/skin-default1.svg">
+                </div>
+                <div id="container-enemy2" class="container">
+                    <img id="sprite-enemy2" class="sprite" src="svgs/skins/skin-default1.svg">
+                </div>
+                <div id="container-enemy3" class="container">
+                    <img id="sprite-enemy3" class="sprite" src="svgs/skins/skin-default1.svg">
+                </div>
+            </div>
+        </div>
+        <div id="screen-end" class="hidden">
+            <div id="screen-end-board">
+                <div id="screen-end-text"></div>
+            </div>
+            <img id="unicorn-reaper" src="svgs/characters/reaper-unicorn.svg">
+            <img id="button-home" class="button" src="svgs/buttons/home.svg">
+            <img id="button-restart" class="button" src="svgs/buttons/restart.svg">
+        </div>
+        <div id="shadow" class="hidden"></div>
+    </div>
+    <div>
+        <audio src="music/FurElise.ogg" id="music"></audio>
+        <audio src="music/button.mp3" id="button"></audio>
+        <audio src="music/shot.mp3" id="shot"></audio>
+    </div>
+    <script src="script.js"></script>
+</body></html>
