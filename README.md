@@ -1,4 +1,4 @@
-# Reaps' Retail Rowdeo
+# Reap's Retail Rowdeo
 
 Join Reaps and visit the infamous [Retail Row](https://malthesers.github.io/reaps-retail-rowdeo/)!
 
