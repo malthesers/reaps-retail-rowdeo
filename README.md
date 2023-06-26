@@ -8,4 +8,4 @@ Take down the enemies but watch out - there's friendly fire!
 
 ### Squads
 
-Choose the skins of both yout allies and your enemies.
+Choose the skins of both your allies and your enemies.
