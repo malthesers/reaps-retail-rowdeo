@@ -301,17 +301,20 @@ h2 {
 .banner {
     position: absolute;
     cursor: pointer;
-    animation: banner-downsize;
+    /* animation: banner-downsize;
     animation-duration: 0.3s;
     animation-fill-mode: both;
-    animation-iteration-count: 1;
+    animation-iteration-count: 1; */
+    transition-duration: 300ms;
+
 }
 
 .banner:hover {
-    animation: banner-upsize;
+    /* animation: banner-upsize;
     animation-duration: 0.3s;
     animation-fill-mode: both;
-    animation-iteration-count: 1;
+    animation-iteration-count: 1; */
+    transform: scale(1.2);
 }
 
 @keyframes banner-downsize {
@@ -360,18 +363,20 @@ h2 {
     position: absolute;
     cursor: pointer;
     width: 10vw;
-    animation: button-downsize;
+    /* animation: button-downsize;
     animation-duration: 0.3s;
     animation-fill-mode: both;
-    animation-iteration-count: 1;
+    animation-iteration-count: 1; */
     z-index: 6;
+    transition: transform 300ms;
 }
 
 .button:hover {
-    animation: button-upsize;
+    /* animation: button-upsize;
     animation-duration: 0.3s;
     animation-fill-mode: both;
-    animation-iteration-count: 1;
+    animation-iteration-count: 1; */
+    transform: scale(1.1);
 }
 
 @keyframes button-downsize {
