@@ -8,7 +8,7 @@ Take down the enemies but watch out - there's friendly fire!
 
 You have 3 lives - a life is lost when an enemy gets through or an ally is knocked down.
 
-## Squads
+## 👥 Squads
 
 Choose the skins of both your allies and your enemies.
 
