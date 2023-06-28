@@ -154,10 +154,14 @@ body {
     z-index: 6;
 }
 
-#squad-selection {
+#squad-layout > div {
+    position: absolute;
     width: 100%;
     height: 100%;
     padding: 1vw;
+}
+
+#squad-selection {
     display: grid;
     grid-template-columns: 4fr 1fr 4fr;
     grid-gap: 1vw;
@@ -166,7 +170,7 @@ body {
 .squad-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 0.5vw;
+    grid-gap: 1vw;
     height: 60%;
 }
 
@@ -178,22 +182,16 @@ body {
     height: 100%;
     display: grid;
     cursor: pointer;
+    transition: transform 0.3s;
 }
 
 .squad-skin:hover {
     transform: scale(1.2);
-    transition-duration: 0.3s;
 }
 
 .squad-skin img {
     place-self: center;
     width: 80%;
-}
-
-#squad-selector {
-    width: 100%;
-    height: 100%;
-    padding: 1vw;
 }
 
 #squad-selector-container {
