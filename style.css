@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    background-color: #39B54A;
+}
+
 img,
 div,
 p {
