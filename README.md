@@ -1,4 +1,4 @@
-# Reap's Retail Rowdeo
+# ![reaps logo](https://github.com/malthesers/reaps-retail-rowdeo/blob/main/favicon/favicon-32x32.png) Reap's Retail Rowdeo
 
 Join Reaps and visit the infamous [Retail Row](https://malthesers.github.io/reaps-retail-rowdeo/)!
 
